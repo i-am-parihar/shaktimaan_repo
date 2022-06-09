@@ -18,13 +18,11 @@ export const Component_B = () => {
     const handleChange = (e) => {
       const str = e.target.value ;
       dispatch(data_input(str))}
-
     return(<div className="inputBox">Input Box:- <input onChange={(e) => handleChange(e)}/></div>)
 }
 
 // Component_C get the data form redux & print on screen
 export const Component_C = () => {
     const {data} = useSelector((state) => state.mainData) ;
-
     return(<div className="outputBox"><h4>{data}</h4></div>)
 }
